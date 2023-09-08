@@ -10,7 +10,8 @@ from homeassistant.components.http import HomeAssistantView
 from homeassistant.core import HomeAssistant, callback
 from homeassistant.helpers.network import get_url, NoURLAvailableError
 
-DOMAIN = "auth-user"
+# Required for any integration
+CONFIG_SCHEMA = None
 
 
 async def async_setup(hass: HomeAssistant, _config: ConfigType) -> bool:
@@ -23,8 +24,8 @@ async def async_setup(hass: HomeAssistant, _config: ConfigType) -> bool:
 class CurrentUserView(HomeAssistantView):
     """ tbd """
 
-    url = "/auth/user"
-    name = "api:auth:user"
+    url = "/auth/userinfo"
+    name = "api:auth:userinfo"
     requires_auth = True
 
     @callback
