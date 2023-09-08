@@ -34,10 +34,10 @@ jobs:
         include:
           - os: ubuntu-latest
             python: '3.10'
-            toxenv: py
+            toxenv: py310
           - os: ubuntu-latest
             python: '3.11'
-            toxenv: py
+            toxenv: py311
     runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout the code
