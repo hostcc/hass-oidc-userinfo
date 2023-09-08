@@ -26,6 +26,8 @@ jobs:
         run: cat "${{ github.event_path }}"
       - name: Check the code with hacs
         uses: "hacs/action@main"
+        with:
+          category: integration
 
   tests:
     name: Tests
