@@ -26,6 +26,7 @@ jobs:
         uses: "hacs/action@main"
         with:
           category: integration
+          repository: "${{ env.GITHUB_REPOSITORY }}"
 
   tests:
     name: Tests
