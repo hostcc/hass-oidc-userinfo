@@ -22,6 +22,8 @@ jobs:
     steps:
       - name: Checkout the code
         uses: actions/checkout@v3
+      - name: Display GH event
+        run: cat "${{ github.event_path }}"
       - name: Check the code with hacs
         uses: "hacs/action@main"
         env:
