@@ -1,0 +1,15 @@
+{
+  "domain": "oidc_userinfo",
+  "name": "OIDC UserInfo endpoint",
+  "codeowners": [
+    "@hostcc"
+  ],
+  "dependencies": [
+    "http"
+  ],
+  "documentation": "https://github.com/hostcc/hass-oidc-userinfo/blob/main/README.md",
+  "integration_type": "helper",
+  "iot_class": "calculated",
+  "issue_tracker": "https://github.com/hostcc/hass-oidc-userinfo/issues",
+  "version": "0.0.0"
+}
