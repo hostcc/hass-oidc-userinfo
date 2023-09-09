@@ -4,11 +4,12 @@
   "codeowners": [
     "@hostcc"
   ],
+  "config_flow": true,
   "dependencies": [
     "http"
   ],
   "documentation": "https://github.com/hostcc/hass-oidc-userinfo/blob/main/README.md",
-  "integration_type": "helper",
+  "integration_type": "service",
   "iot_class": "calculated",
   "issue_tracker": "https://github.com/hostcc/hass-oidc-userinfo/issues",
   "version": "0.0.0"
