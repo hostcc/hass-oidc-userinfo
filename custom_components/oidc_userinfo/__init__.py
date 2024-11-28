@@ -63,7 +63,11 @@ class CurrentUserView(HomeAssistantView):
         hass_host = 'homeassistant.local'
         # Attempt to determine the host from HomeAssistant URL
         with suppress(NoURLAvailableError):
-            hass_host = yarl.URL(get_url(hass, allow_ip=True)).host
+            hass_host = yarl.URL(
+                # Prefer external URL if configured in HASS, failling back to
+                # internal
+                get_url(hass, allow_ip=True, prefer_external=True)
+            ).host
 
         # Determine user name from authentication provider(s)
         user_name = user.name
