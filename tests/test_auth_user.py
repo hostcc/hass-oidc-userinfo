@@ -46,7 +46,7 @@ async def test_auth_user_not_authenticated(hass):
 
 
 @pytest.mark.parametrize('hass_config_urls,expected_user_domain', [
-    # Both external and internal URLs are provided, external one should be 
+    # Both external and internal URLs are provided, external one should be
     # selected
     (
         {

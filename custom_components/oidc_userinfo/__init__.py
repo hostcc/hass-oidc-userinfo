@@ -64,7 +64,7 @@ class CurrentUserView(HomeAssistantView):
         # Attempt to determine the host from HomeAssistant URL
         with suppress(NoURLAvailableError):
             hass_host = yarl.URL(
-                # Prefer external URL if configured in HASS, failling back to 
+                # Prefer external URL if configured in HASS, failling back to
                 # internal
                 get_url(hass, allow_ip=True, prefer_external=True)
             ).host
